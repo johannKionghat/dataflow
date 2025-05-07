@@ -1,2 +1,6 @@
-.yaml
+# Ignore les fichiers de configuration
+config.yml
+# Ignore les fichiers de l'environnement virtuel
 envdataflow
+
+
