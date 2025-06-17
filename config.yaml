@@ -1,0 +1,46 @@
+api:
+  name: jsearch
+  url: "https://jsearch.p.rapidapi.com/search" 
+  method: "GET"
+  headers:
+    X-RapidAPI-Key: "7686976e9fmsh02470842acbfd86p19563bjsn075ef5b20d96"
+    X-RapidAPI-Host: "jsearch.p.rapidapi.com"
+  params:
+    query: "Python developer"
+    page: "1"  
+    num_pages: "1"
+
+csv:
+  path: "data/dataLake/raw/csv/df_all_indeed.csv"
+
+scraping:
+  url: "https://www.welcometothejungle.com/fr/companies/thales/jobs/alternance-technicien-bureau-d-etudes-implantation-cartes-electroniques-f-h_elancourt?q=cdbcc55ada69ac6ebffbd53372933fcd&o=6b26582f-c19d-4890-9b35-03576a1a6a4f"
+
+mistral:
+  api_key: "9w6nzbt8se2jjxXbFViIvGGdhAezMVcR"
+
+database:
+  type: "redshift"  # Peut être: mysql | sqlite | redshift | athena
+  mysql:
+    host: "localhost"
+    port: 3306
+    user: "root"
+    password: ""
+    database: "dataflow"
+
+  sqlite:
+    filepath: "data/mydb.sqlite"
+
+  redshift:
+    host: "kj-dataflow.767398147099.eu-north-1.redshift-serverless.amazonaws.com"
+    port: 5439
+    user: "admin"
+    password: "NLRCZllxyd060$)"
+    database: "dev"
+
+  athena:
+    region: "eu-west-3"
+    s3_output: "s3://athena-query-results-bucket/"
+    database: "dev"
+
+sql_path: "data/dataWarehouse/jobs.sql"
